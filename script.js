@@ -74,6 +74,8 @@ function clearTotal(){
     total=0;
     total1=0;
     total2=0;
+    result=0;
+    changeDisplay();
     console.log(total);
 }
 
@@ -157,7 +159,12 @@ function operate(){
 
     changeDisplay();
 
+    total1 = total;
+    total2 = 0;
+    total = 0;
+    operator = null;
+
     console.log(result);
 
-    clearTotal();
+    //clearTotal();
 }
