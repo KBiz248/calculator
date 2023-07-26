@@ -3,6 +3,9 @@ let total1 = 0;
 let total2 = 0;
 let result = 0;
 let operator;
+function changeDisplay(){
+    document.getElementById('display').textContent = total;
+}
 
 
 
@@ -10,51 +13,61 @@ let operator;
 function one(){
     total = total*10+1;
     console.log(total);
+    changeDisplay();
 }
 
 function two(){
     total=total*10+2;
     console.log(total);
+    changeDisplay();
 }
 
 function three(){
     total=total*10+3;
     console.log(total);
+    changeDisplay();
 }
 
 function four(){
     total=total*10+4;
     console.log(total);
+    changeDisplay();
 }
 
 function five(){
     total=total*10+5;
     console.log(total);
+    changeDisplay();
 }
 
 function six(){
     total=total*10+6;
     console.log(total);
+    changeDisplay();
 }
 
 function seven(){
     total=total*10+7;
     console.log(total);
+    changeDisplay();
 }
 
 function eight(){
     total=total*10+8;
     console.log(total);
+    changeDisplay();
 }
 
 function nine(){
     total=total*10+9;
     console.log(total);
+    changeDisplay();
 }
 
 function zero(){
     total=total*10;
     console.log(total);
+    changeDisplay();
 }
 
 function clearTotal(){
@@ -72,13 +85,10 @@ function add(){
     }else{
         total1=total
     };
-
   
-  operator = 'add';
-   
+  operator = 'add';   
 
-  total=0;
-    
+  total=0;    
 }
 
 function subtract(){
@@ -124,8 +134,7 @@ function divide(){
 }
 
 function operate(){
-    total2=total;
-    
+    total2=total;    
 
     switch(operator){
         case 'add':
@@ -143,6 +152,10 @@ function operate(){
         default:
             break;
     }
+
+    total = result;
+
+    changeDisplay();
 
     console.log(result);
 
