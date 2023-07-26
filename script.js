@@ -1,4 +1,11 @@
 let total = 0;
+let total1 = 0;
+let total2 = 0;
+let result = 0;
+let operator;
+
+
+
 
 function one(){
     total = total*10+1;
@@ -52,9 +59,84 @@ function zero(){
 
 function clearTotal(){
     total=0;
+    total1=0;
+    total2=0;
     console.log(total);
 }
 
-function plus(){
-    console.log('hello')
+function add(){
+if(total1){
+    total2 = total
+  }else{
+    total1=total
+  };
+
+  
+  operator = 'add';
+   
+
+  total=0;
+    
+}
+
+function subtract(){
+    if(total1){
+        total2 = total
+      }else{
+        total1=total
+      };
+
+      operator = 'subtract';
+
+      total = 0;
+}
+
+function multiply(){
+    if(total1){
+        total2 = total
+      }else{
+        total1=total
+      };
+
+      operator = 'multiply';
+
+      total = 0;
+}
+
+function divide(){
+    if(total1){
+        total2 = total
+      }else{
+        total1=total
+      };
+
+      operator = 'divide';
+
+      total = 0;
+}
+
+function operate(){
+    total2=total;
+    
+
+    switch(operator){
+        case 'add':
+            result = total1 + total2;
+            break;
+        case 'subtract':
+            result = total1 - total2;
+            break;
+        case 'multiply':
+            result = total1 * total2;
+            break;
+        case 'divide':
+            result = total1 / total2;
+            break;
+        default:
+            break;
+    }
+
+    console.log(result);
+
+    clearTotal();
 }
