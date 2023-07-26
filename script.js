@@ -65,11 +65,13 @@ function clearTotal(){
 }
 
 function add(){
-if(total1){
-    total2 = total
-  }else{
-    total1=total
-  };
+    if(total1 && operator){operate(); total1 = result;};
+
+    if(total1){
+        total2 = total
+    }else{
+        total1=total
+    };
 
   
   operator = 'add';
@@ -80,6 +82,8 @@ if(total1){
 }
 
 function subtract(){
+    if(total1 && operator){operate(); total1 = result;};
+
     if(total1){
         total2 = total
       }else{
@@ -92,6 +96,8 @@ function subtract(){
 }
 
 function multiply(){
+    if(total1 && operator){operate(); total1 = result;};
+
     if(total1){
         total2 = total
       }else{
@@ -104,6 +110,8 @@ function multiply(){
 }
 
 function divide(){
+    if(total1 && operator){operate(); total1 = result;};
+
     if(total1){
         total2 = total
       }else{
